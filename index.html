@@ -1,101 +1,749 @@
-<!DOCTYPE html>
-<html lang="en">
+<html data-react-helmet="lang" lang="en">
   <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
-
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>Hello World!</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#000000" />
+    <title>Messias de Paula Pereira - Mespper</title>
+    <style>
+      .gatsby-image-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .gatsby-image-wrapper picture.object-fit-polyfill {
+        position: static !important;
+      }
+      .gatsby-image-wrapper img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        max-width: none;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+      }
+      .gatsby-image-wrapper [data-main-image] {
+        opacity: 0;
+        transform: translateZ(0);
+        transition: opacity 0.25s linear;
+        will-change: opacity;
+      }
+      .gatsby-image-wrapper-constrained {
+        display: inline-block;
+        vertical-align: top;
+      }
+    </style>
 
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <script type="module">
+      const e =
+        "undefined" != typeof HTMLImageElement &&
+        "loading" in HTMLImageElement.prototype;
+      e &&
+        document.body.addEventListener(
+          "load",
+          function (e) {
+            const t = e.target;
+            if (void 0 === t.dataset.mainImage) return;
+            if (void 0 === t.dataset.gatsbyImageSsr) return;
+            let a = null,
+              n = t;
+            for (; null === a && n; )
+              void 0 !== n.parentNode.dataset.gatsbyImageWrapper &&
+                (a = n.parentNode),
+                (n = n.parentNode);
+            const o = a.querySelector("[data-placeholder-image]"),
+              r = new Image();
+            (r.src = t.currentSrc),
+              r
+                .decode()
+                .catch(() => {})
+                .then(() => {
+                  (t.style.opacity = 1),
+                    o &&
+                      ((o.style.opacity = 0),
+                      (o.style.transition = "opacity 500ms linear"));
+                });
+          },
+          !0
+        );
+    </script>
 
-    <!-- Import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css_messias.css" />
+
   </head>
-  <body>
-    <!--
-      This is the body of the page
-      Look at the elements and see how they appear in the rendered page on the right
-      Each element is defined using tags, with < and > indicating where each one opens and closes
-      There are elements for sections of the page, images, text, and more
-      The elements include attributes referenced in the CSS for the page style
-    -->
+  <body data-theme="darkTheme" class="" data-react-helmet="data-theme,class">
+    <div id="___gatsby">
+      <div
+        style="outline: currentcolor none medium"
+        tabindex="-1"
+        id="gatsby-focus-wrapper"
+      >
+        <div class="style-module--Layout--qUuYN">
+          <header class="style-module--Header--YWbBK">
+            <div
+              class="style-module--ContentWrapper&nbsp;--YaaR1"
+              style="
+                animation-name: fadeDown;
+                animation-timing-function: ease-out;
+                animation-duration: 200ms;
+                animation-delay: 0ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+              "
+            >
+              <a aria-current="page" aria-label="home" class="" href="/"
+                ><div
+                  class="style-module--Logo--xswKa"
+                  aria-roledescription="logo"
+                  style="font-size: 2rem; color: var(--primary-color)"
+                >
+                | <span style="color:#1cbcb9">Mes</span>sias de  <span style="color:#1cbcb9">P</span>aula  <span style="color:#1cbcb9">Per</span>eira | <img src="https://cdn.glitch.global/b83b6661-2912-47e2-8fdd-06925f0e1714/logo_mespper.webp?v=1660228140795" width="149px">
+                </div></a
+              >
 
-    <!-- The wrapper and content divs set margins and positioning -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">Hello World!</h1>
+            </div>
+          </header>
+          <main>
 
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <!-- Instructions on using this project -->
-        <div class="instructions">
-          <h2>
-            Using this project
-          </h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out README.md in the editor for
-            more info and next steps you can take!
-          </p>
-          <!-- ADD BUTTON HERE -->
-          
-          <!-- Once you've added the button from the readme, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
+            <div
+              style="
+                animation-name: fadeUp;
+                animation-timing-function: ease-out;
+                animation-duration: 200ms;
+                animation-delay: 0ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+              "
+            >
+              <section id="about" class="style-module--Section--cRkU7">
+                <div class="style-module--ContentWrapper&nbsp;--OGYKD">
+                  <h3 class="style-module--Heading--MHhvT">About Me</h3>
+                  <div class="style-module--About--ZDLYh">
+                    <div class="style-module--Description--jTMiA">
+                      <p>
+                        I'm Messias Pereira, a post-career software developer
+                        and writer.
+                      </p>
+                      <p>My interests include:</p>
+                      <ul>
+                        <li>
+                          Software Development, with a particular focus at the
+                          moment on 3D Web / WebXR
+                        </li>
+                        <li>Home Education and Democratic Schooling</li>
+                        <li>
+                          Nonviolent Communication and Self-Determination Theory
+                        </li>
+                        <li>Software Quality and Reliability</li>
+                      </ul>
+                      <p>
+                        Previously, I spent a 20 year career working at
+                        Metaswitch Networks (now
+                        <a
+                          href="https://azure.microsoft.com/en-gb/industries/telecommunications/"
+                          >Microsoft Azure for Operators</a
+                        >) in a wide range of technical and leadership roles.
+                      </p>
+                      <p>
+                        A lot of the work I do these days is pro bono and/or
+                        self-directed and/or open-source.
+                      </p>
+                      <p>
+                        I do also take on some paid contract work and
+                        consultancy. If you have a project that you think I
+                        could help with, please do reach out.
+                      </p>
+                    </div>
+                    <div
+                      style="
+                        animation-name: fadeLeft;
+                        animation-timing-function: ease-out;
+                        animation-duration: 200ms;
+                        animation-delay: 200ms;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: backwards;
+                      "
+                    >
+                      <div class="style-module--ImageWrapper--VB5j4">
+                        <div
+                          data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained style-module--Image--04AsP"
+                        >
+                          <div style="max-width: 400px; display: block">
+                            <img
+                              alt=""
+                              role="presentation"
+                              aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height='807' width='400' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                              style="
+                                max-width: 100%;
+                                display: block;
+                                position: static;
+                              "
+                            />
+                          </div>
+                          <img
+                            aria-hidden="true"
+                            data-placeholder-image=""
+                            style="
+                              opacity: 0;
+                              transition: opacity 500ms linear 0s;
+                              object-fit: cover;
+                            "
+                            decoding="async"
+                            src="https://cdn.glitch.global/9e6b583b-0f78-42aa-8ca0-2df49d2f3525/Messias.jpg?v=1663246576737"
+                            alt=""
+                          /><picture
+                            >
+                            <img
+                              data-main-image=""
+                              style="object-fit: cover; opacity: 1"
+                              sizes="(min-width: 400px) 400px, 100vw"
+                              decoding="async"
+                              loading="lazy"
+                              src="https://cdn.glitch.global/9e6b583b-0f78-42aa-8ca0-2df49d2f3525/Messias.jpg?v=1663246576737"
+                              srcset="
+                                https://cdn.glitch.global/9e6b583b-0f78-42aa-8ca0-2df49d2f3525/Messias.jpg?v=1663246576737 400w
+                              "
+                              alt="About Me"
+                              width="400"
+                              height="807" /></picture
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div
+              style="
+                animation-name: fadeIn;
+                animation-timing-function: ease-out;
+                animation-duration: 200ms;
+                animation-delay: 0ms;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+              "
+            >
+              <section id="projects" class="style-module--Section--cRkU7">
+                <div class="style-module--ContentWrapper&nbsp;--OGYKD">
+                  <h3 class="style-module--Heading--MHhvT">Projects</h3>
+                  <div
+                    class="style-module--Projects--ovEGb style-module--SlideContainer--8H-Ua"
+                  >
+                    <div
+                      class="style-module--Project--pDxZI"
+                      style="
+                        flex-direction: row-reverse;
+                        animation-name: fadeUp;
+                        animation-timing-function: ease-out;
+                        animation-duration: 200ms;
+                        animation-delay: 0ms;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: backwards;
+                      "
+                    >
+                      <div class="style-module--Details--8WO9b">
+                        <span class="style-module--Category--aZp77"
+                          >NONVIOLENT COMMUNICATION</span
+                        >
+                        <h4 class="style-module--Title--lkXPP">
+                          Decision Ninja
+                        </h4>
+                        <p>
+                          A mobile-first web application that supports personal
+                          decision making using principles from Nonviolent
+                          Communication.
+                        </p>
+                        <div class="style-module--Tags--673l6"></div>
+                        <div class="style-module--Links--R3Rie">
+                          <a
+                            href="https://decision.ninja"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 194.818 194.818"
+                              x="0px"
+                              y="0px"
+                              role="img"
+                              fill="var(--subtext-color)"
+                              width="194.818px"
+                              height="194.818px"
+                            >
+                              <g>
+                                <path
+                                  d="M185.8,2.2l-56.6,0c-4.8,0-9,3.6-9.3,8.4c-0.3,5.2,3.8,9.6,9,9.6h13.5c8.1,0,12.1,9.7,6.4,15.4L78,106.2 c-3.6,3.6-3.8,9.6-0.1,13.1c1.7,1.7,4,2.5,6.2,2.5c2.3,0,4.6-0.9,6.4-2.6l70.9-70.9c5.7-5.7,15.4-1.7,15.4,6.4v13.1 c0,4.8,3.6,9,8.4,9.3c5.2,0.3,9.6-3.8,9.6-9v-57C194.8,6.2,190.8,2.2,185.8,2.2z"
+                                ></path>
+                                <path
+                                  d="M147.7,77.3c-4.5,0.6-7.7,4.7-7.7,9.2c0,14.6,0,59.7,0,79.1c0,5-4.1,9-9,9H27c-5,0-9-4.1-9-9V61.7c0-5,4.1-9,9-9l84.4,0 c4.8,0,9-3.6,9.3-8.4c0.3-5.2-3.8-9.6-9-9.6H9c-5,0-9,4.1-9,9v139.9c0,5,4.1,9,9,9H149c5,0,9-4.1,9-9V86.2 C158,80.8,153.2,76.5,147.7,77.3z"
+                                ></path>
+                              </g></svg
+                          ></a>
+                        </div>
+                      </div>
+                      <a
+                        href="https://decision.ninja"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="External Link"
+                        ><div
+                          data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained style-module--ProjectImageWrapper--Bedfs"
+                        >
+                          <div style="max-width: 400px; display: block">
+                            <img
+                              alt=""
+                              role="presentation"
+                              aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height='400' width='400' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                              style="
+                                max-width: 100%;
+                                display: block;
+                                position: static;
+                              "
+                            />
+                          </div>
+                          <img
+                            aria-hidden="true"
+                            data-placeholder-image=""
+                            style="
+                              opacity: 0;
+                              transition: opacity 500ms linear 0s;
+                              object-fit: cover;
+                            "
+                            decoding="async"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB3ElEQVQ4y7WVP6saQRTFz4xbJBibIG5hJ/gF7C1srYWkSIQEJIVEKz+BlU1KFYXUYiA2FiKv20KwVRAiebwu5WtskufOCXeZlXF5fwLxDVx29s7c35679+4scD60vb4A8A7AFMBPAL8B/AFwA+A7gI8AXtm9ytrZcB1vAPwAwCdM4B8eYJzGFyfgzloIwFgLHX+8b5yE6gTsaM08YUcH/DWp8q0DC+08Dkym6vqNfbcy/xTDXgLYO0A+ALoP7Mb8AvBagO/FobW+8zzPaK2NUupRmKxrrZlKpYzneXIfp/5ZgN+cIph/VJdM/2hFXEEpdS2LlUolbLfbplQqsVAoMJfLMZ1O01UrasSXz+dZLpdZq9XYaDRMsVg0VvkttNbStJxOp4akWS6X7HQ67Ha7nEwmXK1W3O/33Gw2kW23WwZBwPF4zNlsRomRvaJUHigKI6Dv+yYIAoGy1WpxOBxGgev1mqPRKALJWCwWHAwGkcLD4cDdbmd834+ANhtc20molDL1ep39fj8CNptNZrNZ2qKxWq2y1+txPp9HCiWTTCZjHNjtqSi2UvcWJUrlkaIopeLWuTq1TVxlaQXbEpG5RXF9YrLXrp+1zcUb++Kf3rMcDhc9vp71gP3vX8BfNd6Qp7cn3NsAAAAASUVORK5CYII="
+                            alt=""
+                          /><picture
+                            ><source
+                              type="image/webp"
+                              srcset="
+                                /static/d33dbef381edbffdd51f89fef4961392/e64f1/decision-ninja.webp 100w,
+                                /static/d33dbef381edbffdd51f89fef4961392/8b00d/decision-ninja.webp 200w,
+                                /static/d33dbef381edbffdd51f89fef4961392/9c0a1/decision-ninja.webp 400w,
+                                /static/d33dbef381edbffdd51f89fef4961392/88f3e/decision-ninja.webp 800w
+                              "
+                              sizes="(min-width: 400px) 400px, 100vw" />
+                            <img
+                              class="style-module--ProjectImage--gLfug"
+                              data-main-image=""
+                              style="object-fit: cover; opacity: 1"
+                              sizes="(min-width: 400px) 400px, 100vw"
+                              decoding="async"
+                              loading="lazy"
+                              src="/static/d33dbef381edbffdd51f89fef4961392/5f2c3/decision-ninja.png"
+                              srcset="
+                                /static/d33dbef381edbffdd51f89fef4961392/90cd3/decision-ninja.png 100w,
+                                /static/d33dbef381edbffdd51f89fef4961392/614dc/decision-ninja.png 200w,
+                                /static/d33dbef381edbffdd51f89fef4961392/5f2c3/decision-ninja.png 400w,
+                                /static/d33dbef381edbffdd51f89fef4961392/8cb4c/decision-ninja.png 800w
+                              "
+                              alt="Decision Ninja"
+                              width="400"
+                              height="400" /></picture
+                          ><noscript
+                            ><picture
+                              ><source
+                                type="image/webp"
+                                srcset="
+                                  /static/d33dbef381edbffdd51f89fef4961392/e64f1/decision-ninja.webp 100w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/8b00d/decision-ninja.webp 200w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/9c0a1/decision-ninja.webp 400w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/88f3e/decision-ninja.webp 800w
+                                "
+                                sizes="(min-width: 400px) 400px, 100vw" />
+                              <img
+                                width="400"
+                                height="400"
+                                class="style-module--ProjectImage--gLfug"
+                                data-main-image=""
+                                style="object-fit: cover; opacity: 0"
+                                sizes="(min-width: 400px) 400px, 100vw"
+                                decoding="async"
+                                loading="lazy"
+                                src="/static/d33dbef381edbffdd51f89fef4961392/5f2c3/decision-ninja.png"
+                                srcset="
+                                  /static/d33dbef381edbffdd51f89fef4961392/90cd3/decision-ninja.png 100w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/614dc/decision-ninja.png 200w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/5f2c3/decision-ninja.png 400w,
+                                  /static/d33dbef381edbffdd51f89fef4961392/8cb4c/decision-ninja.png 800w
+                                "
+                                alt="Decision Ninja" /></picture
+                          ></noscript></div
+                      ></a>
+                    </div>
+                    <div
+                      class="style-module--Project--pDxZI"
+                      style="
+                        animation-name: fadeUp;
+                        animation-timing-function: ease-out;
+                        animation-duration: 200ms;
+                        animation-delay: 0ms;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: backwards;
+                      "
+                    >
+                      <div class="style-module--Details--8WO9b">
+                        <span class="style-module--Category--aZp77"
+                          >Self-Determination Theory</span
+                        >
+                        <h4 class="style-module--Title--lkXPP">
+                          SDT Condensed
+                        </h4>
+                        <p>
+                          I'm a huge fan of Deci and Ryan's Self-Determination
+                          Theory, but their writing can be inaccessible to a
+                          general audience. My 'SDT Condensed' project provides
+                          a condensed version of some of the key chapters from
+                          their 2017 book on Self-Determination Theory
+                        </p>
+                        <div class="style-module--Tags--673l6"></div>
+                        <div class="style-module--Links--R3Rie">
+                          <a
+                            href="https://diarmidmackenzie.github.io/sdt-condensed"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 194.818 194.818"
+                              x="0px"
+                              y="0px"
+                              role="img"
+                              fill="var(--subtext-color)"
+                              width="194.818px"
+                              height="194.818px"
+                            >
+                              <g>
+                                <path
+                                  d="M185.8,2.2l-56.6,0c-4.8,0-9,3.6-9.3,8.4c-0.3,5.2,3.8,9.6,9,9.6h13.5c8.1,0,12.1,9.7,6.4,15.4L78,106.2 c-3.6,3.6-3.8,9.6-0.1,13.1c1.7,1.7,4,2.5,6.2,2.5c2.3,0,4.6-0.9,6.4-2.6l70.9-70.9c5.7-5.7,15.4-1.7,15.4,6.4v13.1 c0,4.8,3.6,9,8.4,9.3c5.2,0.3,9.6-3.8,9.6-9v-57C194.8,6.2,190.8,2.2,185.8,2.2z"
+                                ></path>
+                                <path
+                                  d="M147.7,77.3c-4.5,0.6-7.7,4.7-7.7,9.2c0,14.6,0,59.7,0,79.1c0,5-4.1,9-9,9H27c-5,0-9-4.1-9-9V61.7c0-5,4.1-9,9-9l84.4,0 c4.8,0,9-3.6,9.3-8.4c0.3-5.2-3.8-9.6-9-9.6H9c-5,0-9,4.1-9,9v139.9c0,5,4.1,9,9,9H149c5,0,9-4.1,9-9V86.2 C158,80.8,153.2,76.5,147.7,77.3z"
+                                ></path>
+                              </g></svg
+                          ></a>
+                        </div>
+                      </div>
+                      <a
+                        href="https://diarmidmackenzie.github.io/sdt-condensed"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="External Link"
+                        ><div
+                          data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained style-module--ProjectImageWrapper--Bedfs"
+                        >
+                          <div style="max-width: 400px; display: block">
+                            <img
+                              alt=""
+                              role="presentation"
+                              aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height='259' width='400' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                              style="
+                                max-width: 100%;
+                                display: block;
+                                position: static;
+                              "
+                            />
+                          </div>
+                          <img
+                            aria-hidden="true"
+                            data-placeholder-image=""
+                            style="
+                              opacity: 0;
+                              transition: opacity 500ms linear 0s;
+                              object-fit: cover;
+                            "
+                            decoding="async"
+                            src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAACAAFB//EABYBAQEBAAAAAAAAAAAAAAAAAAQFBv/aAAwDAQACEAMQAAABOuN1NVZWyFJPQV//xAAZEAACAwEAAAAAAAAAAAAAAAAEBQIDBgD/2gAIAQEAAQUCFbgQ5doxySZHrrJT1D/X9mt5fVS7cl0Hf//EACERAAIBAwMFAAAAAAAAAAAAAAECAwQRIQAFEiNBYWKT/9oACAEDAQE/AU3aaqeJYzHzDcj03RGDR2VWBkcm1y1wVyBjvozVN8tT/OTx76//xAAgEQACAQMEAwAAAAAAAAAAAAABAgMEERIABSEiQXPC/9oACAECAQE/AZ9jipIppKjPAjC4ZJJEZZAWZeqAZWCgduC1z4KxU4UWFQR7Ix8a/8QAJhAAAgIABQMEAwAAAAAAAAAAAgMBBAAFERIhBhMxFCNCUTIzQf/aAAgBAQAGPwIUFYAWzOzawHDzM6f1UYzOH2EIQpm6ubigRkYZ2O2JeORgX+fkz6wRBmFEo1+Nhcx4j6nHS2RRfLLDfnJLZmPu3nEO70IAaHuCua1Q0iAdu/aRqNhCXGf9M1clyWk/pldii/NKdGtWjNXVfZm6VFSBGmbv2kpdhq4ZM6ccY7ZKps9lR7hQxP5junUQfpM7pmd3nnTxEY//xAAaEAEBAAMBAQAAAAAAAAAAAAABEQAhQTFx/9oACAEBAAE/ISTW2U5ZNLPY8wA0tg6DupAg9Igm8AtpeVSxF+4afPNvKGfxVB+WVPCnGfqqeN+USqLgKRrJbRALP//aAAwDAQACAAMAAAAQqN//xAAaEQEBAAIDAAAAAAAAAAAAAAABEQBxITGx/9oACAEDAQE/EAdYCXgIxd0FoAhIlig4UXGvms//xAAaEQEBAAIDAAAAAAAAAAAAAAABEQAxQVFh/9oACAECAQE/EJfRCMFFpPIGRcCk4QVSDyEGtevef//EABgQAQEBAQEAAAAAAAAAAAAAAAERADEh/9oACAEBAAE/EKsEfXhrA1vI+XUHj3+BFYwSQy15FRQbACaVSF7qHZzcPict35skJJ1E1aXBi+Io4gAq6R/gyAf/2Q=="
+                            alt=""
+                          /><picture
+                            ><source
+                              type="image/webp"
+                              srcset="
+                                /static/527ea511cb6507e189c69bc2b8f86b14/8c4c0/sdt.webp 100w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/d424a/sdt.webp 200w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/95391/sdt.webp 400w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/e6358/sdt.webp 800w
+                              "
+                              sizes="(min-width: 400px) 400px, 100vw" />
+                            <img
+                              class="style-module--ProjectImage--gLfug"
+                              data-main-image=""
+                              style="object-fit: cover; opacity: 1"
+                              sizes="(min-width: 400px) 400px, 100vw"
+                              decoding="async"
+                              loading="lazy"
+                              src="/static/527ea511cb6507e189c69bc2b8f86b14/5039a/sdt.jpg"
+                              srcset="
+                                /static/527ea511cb6507e189c69bc2b8f86b14/c1b2c/sdt.jpg 100w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/456ea/sdt.jpg 200w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/5039a/sdt.jpg 400w,
+                                /static/527ea511cb6507e189c69bc2b8f86b14/ab728/sdt.jpg 800w
+                              "
+                              alt="Self-Determination Theory Condensed"
+                              width="400"
+                              height="259" /></picture
+                          ><noscript
+                            ><picture
+                              ><source
+                                type="image/webp"
+                                srcset="
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/8c4c0/sdt.webp 100w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/d424a/sdt.webp 200w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/95391/sdt.webp 400w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/e6358/sdt.webp 800w
+                                "
+                                sizes="(min-width: 400px) 400px, 100vw" />
+                              <img
+                                width="400"
+                                height="259"
+                                class="style-module--ProjectImage--gLfug"
+                                data-main-image=""
+                                style="object-fit: cover; opacity: 0"
+                                sizes="(min-width: 400px) 400px, 100vw"
+                                decoding="async"
+                                loading="lazy"
+                                src="/static/527ea511cb6507e189c69bc2b8f86b14/5039a/sdt.jpg"
+                                srcset="
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/c1b2c/sdt.jpg 100w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/456ea/sdt.jpg 200w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/5039a/sdt.jpg 400w,
+                                  /static/527ea511cb6507e189c69bc2b8f86b14/ab728/sdt.jpg 800w
+                                "
+                                alt="Self-Determination Theory Condensed" /></picture
+                          ></noscript></div
+                      ></a>
+                    </div>
+                    <div
+                      class="style-module--Project--pDxZI"
+                      style="
+                        flex-direction: row-reverse;
+                        animation-name: fadeUp;
+                        animation-timing-function: ease-out;
+                        animation-duration: 200ms;
+                        animation-delay: 0ms;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: backwards;
+                      "
+                    >
+                      <div class="style-module--Details--8WO9b">
+                        <span class="style-module--Category--aZp77"
+                          >WEB XR</span
+                        >
+                        <h4 class="style-module--Title--lkXPP">
+                          Winter Wonderland - Advent 2021
+                        </h4>
+                        <p>
+                          In December 2021, I built an interactive Christmas
+                          Scene in VR, adding something new every day until
+                          Christmas. An extremely fun and rewarding project.
+                        </p>
+                        <div class="style-module--Tags--673l6"></div>
+                        <div class="style-module--Links--R3Rie">
+                          <a
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            ><svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 194.818 194.818"
+                              x="0px"
+                              y="0px"
+                              role="img"
+                              fill="var(--subtext-color)"
+                              width="194.818px"
+                              height="194.818px"
+                            >
+                              <g>
+                                <path
+                                  d="M185.8,2.2l-56.6,0c-4.8,0-9,3.6-9.3,8.4c-0.3,5.2,3.8,9.6,9,9.6h13.5c8.1,0,12.1,9.7,6.4,15.4L78,106.2 c-3.6,3.6-3.8,9.6-0.1,13.1c1.7,1.7,4,2.5,6.2,2.5c2.3,0,4.6-0.9,6.4-2.6l70.9-70.9c5.7-5.7,15.4-1.7,15.4,6.4v13.1 c0,4.8,3.6,9,8.4,9.3c5.2,0.3,9.6-3.8,9.6-9v-57C194.8,6.2,190.8,2.2,185.8,2.2z"
+                                ></path>
+                                <path
+                                  d="M147.7,77.3c-4.5,0.6-7.7,4.7-7.7,9.2c0,14.6,0,59.7,0,79.1c0,5-4.1,9-9,9H27c-5,0-9-4.1-9-9V61.7c0-5,4.1-9,9-9l84.4,0 c4.8,0,9-3.6,9.3-8.4c0.3-5.2-3.8-9.6-9-9.6H9c-5,0-9,4.1-9,9v139.9c0,5,4.1,9,9,9H149c5,0,9-4.1,9-9V86.2 C158,80.8,153.2,76.5,147.7,77.3z"
+                                ></path>
+                              </g></svg></a
+                          ><a
+                            href="https://github.com/diarmidmackenzie/christmas-scene"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            ><svg
+                              version="1.1"
+                              role="img"
+                              fill="var(--subtext-color)"
+                              xmlns="http://www.w3.org/2000/svg"
+                              x="0px"
+                              y="0px"
+                              viewBox="262 -262 1024 1024"
+                            >
+                              <path
+                                d="M774-249.4c-282.9,0-512,229.1-512,512c0,226.6,146.6,417.9,350.1,485.8c25.6,4.5,35.2-10.9,35.2-24.3 c0-12.2-0.6-52.5-0.6-95.4c-128.6,23.7-161.9-31.4-172.2-60.2c-5.8-14.7-30.7-60.2-52.5-72.3c-17.9-9.6-43.5-33.3-0.6-33.9 c40.3-0.6,69.1,37.1,78.7,52.5c46.1,77.4,119.7,55.7,149.1,42.2c4.5-33.3,17.9-55.7,32.6-68.5c-113.9-12.8-233-57-233-252.8 c0-55.7,19.8-101.8,52.5-137.6c-5.1-12.8-23-65.3,5.1-135.7c0,0,42.9-13.4,140.8,52.5c41-11.5,84.5-17.3,128-17.3 c43.5,0,87,5.8,128,17.3c97.9-66.6,140.8-52.5,140.8-52.5c28.2,70.4,10.2,122.9,5.1,135.7c32.6,35.8,52.5,81.3,52.5,137.6 c0,196.5-119.7,240-233.6,252.8c18.6,16,34.6,46.7,34.6,94.7c0,68.5-0.6,123.5-0.6,140.8c0,13.4,9.6,29.4,35.2,24.3 c202.2-67.8,348.8-259.8,348.8-485.8C1286-20.2,1056.9-249.4,774-249.4z"
+                              ></path></svg></a
+                          ><a
+                            href="https://twitter.com/dhmackenzie/status/1466763356421996545"
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            ><svg
+                              version="1.1"
+                              id="Mail"
+                              fill="var(--subtext-color)"
+                              xmlns="http://www.w3.org/2000/svg"
+                              x="0px"
+                              y="0px"
+                              viewBox="0 0 310 310"
+                            >
+                              <g id="XMLID_826_">
+                                <path
+                                  id="XMLID_827_"
+                                  d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73 c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783 c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598 C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467 c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977 c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889 c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597 c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961 c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895 c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367 c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998 C307.394,57.037,305.009,56.486,302.973,57.388z"
+                                ></path>
+                              </g></svg
+                          ></a>
+                        </div>
+                      </div>
+                      <a
+                        href="https://diarmidmackenzie.github.io/christmas-scene"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="External Link"
+                        ><div
+                          data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained style-module--ProjectImageWrapper--Bedfs"
+                        >
+                          <div style="max-width: 400px; display: block">
+                            <img
+                              alt=""
+                              role="presentation"
+                              aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height='268' width='400' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                              style="
+                                max-width: 100%;
+                                display: block;
+                                position: static;
+                              "
+                            />
+                          </div>
+                          <img
+                            aria-hidden="true"
+                            data-placeholder-image=""
+                            style="
+                              opacity: 0;
+                              transition: opacity 500ms linear 0s;
+                              object-fit: cover;
+                            "
+                            decoding="async"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABJ0AAASdAHeZh94AAAC1klEQVQoz21Pe0hTYRT/KAkKDSKtEIrMTCT/MIsUIxG0l0JQUpgUUVCJRpo5XzOLNJllPtq0YerQbG7qfGS+a5vOTZfbnY9NN/ewmZvmY5u7mq977xdXIQL9cTh/nN/jnAPYvMaIq6Fh/j43Lwdd8PW6GOD37JOIUjPwtEqWwJEnVMkTOHIKF6FwkUQuklyroDYoXzaRldGsBLXN7U+io66c9b4dFnwtyP+Sn08KqyVPqHvXocxoUWa2ql63jdA6RrM71TkCHa1DXSNWInpTiVhb0DUGilkVWbQ33u5Hzpw8cT34XIiPJ62U3aoyNkqQSpmuGjFw5HquXMfuVTb3K3nifmYJi8ur/6pQfxkeBxLF0Khx8pSvLwDgtKfbec/DRYWMCevisMGonZ7VT82oDONjJtP4JCpAmtjSNKFQ0dUv089ajPM2gK6tGcxTBXRG+ot0ehEzIjQ4j5YBIVwnCPvysgBRVrbx1cZps/1X4MfA/bTjbVohBuHC6qp1ZQVgEJrnrSr9xIhWJx0cio+NjblzA67C2RlLu0T2WaJhSca4/KHk6lcO6Tscsp1i2+MghBiOYzgOIIR2FOXyGpJSU56nJRcyiipLP8Tdvf84nkrvGMrvVDH5miye6GCih3OOyyHq7vDKSALiEEICEmAJRed+T89ZrVqdzmKx2tfw+aXV5Oh7ebm5mrnlPs2EQmcJZz4E8eDA+32OmXuO0d1tKzZyObYOzBM/JydNM+jyGvkJNqAxtHwTrK9jOE7Gb/b0zBjPBFent3t35uxyzHHsM0lJitg4e8GO8sVS0Q9FK1/ELCtHBgY3OBI4RpqlZUJOUhHrOzOrPKqip1g82h3DjiinUwBBEBBC1aiay6uva2hUqzVwC3CMmDHPyqS9nNhH2QFuDAbVLdU1hHoUbJVuxm07sdpt5p7uOj7H5YGzV6IH+J8miG2c/wQkIMku/kHzBfRbkX5/AcclNcaj31UAAAAAAElFTkSuQmCC"
+                            alt=""
+                          /><picture
+                            ><source
+                              type="image/webp"
+                              srcset="
+                                /static/44a719294f7157fc4deada4201b339b9/64a37/christmas-scene.webp 100w,
+                                /static/44a719294f7157fc4deada4201b339b9/70449/christmas-scene.webp 200w,
+                                /static/44a719294f7157fc4deada4201b339b9/4a50a/christmas-scene.webp 400w,
+                                /static/44a719294f7157fc4deada4201b339b9/402f6/christmas-scene.webp 800w
+                              "
+                              sizes="(min-width: 400px) 400px, 100vw" />
+                            <img
+                              class="style-module--ProjectImage--gLfug"
+                              data-main-image=""
+                              style="object-fit: cover; opacity: 1"
+                              sizes="(min-width: 400px) 400px, 100vw"
+                              decoding="async"
+                              loading="lazy"
+                              src="/static/44a719294f7157fc4deada4201b339b9/d9346/christmas-scene.png"
+                              srcset="
+                                /static/44a719294f7157fc4deada4201b339b9/6cb8d/christmas-scene.png 100w,
+                                /static/44a719294f7157fc4deada4201b339b9/d54f2/christmas-scene.png 200w,
+                                /static/44a719294f7157fc4deada4201b339b9/d9346/christmas-scene.png 400w,
+                                /static/44a719294f7157fc4deada4201b339b9/d08c4/christmas-scene.png 800w
+                              "
+                              alt="Christmas Scene"
+                              width="400"
+                              height="268" /></picture
+                          ><noscript
+                            ><picture
+                              ><source
+                                type="image/webp"
+                                srcset="
+                                  /static/44a719294f7157fc4deada4201b339b9/64a37/christmas-scene.webp 100w,
+                                  /static/44a719294f7157fc4deada4201b339b9/70449/christmas-scene.webp 200w,
+                                  /static/44a719294f7157fc4deada4201b339b9/4a50a/christmas-scene.webp 400w,
+                                  /static/44a719294f7157fc4deada4201b339b9/402f6/christmas-scene.webp 800w
+                                "
+                                sizes="(min-width: 400px) 400px, 100vw" />
+                              <img
+                                width="400"
+                                height="268"
+                                class="style-module--ProjectImage--gLfug"
+                                data-main-image=""
+                                style="object-fit: cover; opacity: 0"
+                                sizes="(min-width: 400px) 400px, 100vw"
+                                decoding="async"
+                                loading="lazy"
+                                src="/static/44a719294f7157fc4deada4201b339b9/d9346/christmas-scene.png"
+                                srcset="
+                                  /static/44a719294f7157fc4deada4201b339b9/6cb8d/christmas-scene.png 100w,
+                                  /static/44a719294f7157fc4deada4201b339b9/d54f2/christmas-scene.png 200w,
+                                  /static/44a719294f7157fc4deada4201b339b9/d9346/christmas-scene.png 400w,
+                                  /static/44a719294f7157fc4deada4201b339b9/d08c4/christmas-scene.png 800w
+                                "
+                                alt="Christmas Scene" /></picture
+                          ></noscript></div
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </main>
+          <footer
+            class="style-module--Footer--c8cty"
+            style="
+              background: var(--background-color);
+              border-top: 3px solid var(--box-shadow-hover-color);
+            "
+          >
+            <div class="style-module--ContentWrapper--lF0Dx">
+              <a aria-current="page" aria-label="home" class="" href="/"
+                ><div
+                  class="style-module--Logo--xswKa"
+                  aria-roledescription="logo"
+                  style="font-size: 1.5rem; color: var(--primary-color)"
+                >
+                  Messias de Paula Pereira - Mespper
+                </div></a
+              >
+              <div class="style-module--Links--eTR7f">
+                <a
+                  aria-label="Privacy"
+                  style="color: var(--primary-color)"
+                  href="/privacy"
+                  >Privacy</a
+                ><a
+                  href="https://www.gatsbyjs.com/plugins/gatsby-theme-portfolio-minimal/"
+                  aria-label="© 2022, Built using Gatsby"
+                  style="color: var(--primary-color)"
+                  >© 2022, Built using Gatsby</a
+                >
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
     </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
   </body>
 </html>
